@@ -27,7 +27,7 @@ async def sessiongen_callbacks(bot: Client, cq: CallbackQuery):
         await cq.answer()
 
         if choice == "generate":
-            return await cq.message.reply(
+            return await cq.message.edit_text(  
                 ASK_QUES,
                 reply_markup=InlineKeyboardMarkup(BUTTONS_QUES)
             )
